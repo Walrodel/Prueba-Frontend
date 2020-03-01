@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="font-awesome/css/font-awesome.css">
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+  <header>
+    <h1>Course Catalog</h1>
+  </header>
+  <section class="container">
+    <article>
+      <div class="filters">
+        <div class="filter">
+          <label for="credits">Filters Credits at least <span id="filter-credits"></span> credits</label>
+          <input type="range" id="credits" min="0" max="30" step="1" value="7" onchange="getCourses()">
+        </div>
+        <div class="filter">
+          <label for="stars">Stars at least <span id="filter-stars"></span> stars</label>
+          <input type="range" id="stars" min="0" max="5" step="1" value="1" onchange="getCourses()">
+        </div>
+        <div class="filter">
+          <label for="price">Cost at least <span id="filter-price"></span> dollars</label>
+          <input type="range" id="price" min="0" max="600" step="1" value="23" onchange="getCourses()">
+        </div>
+      </div>
+      <hr>
+      <h4 id="showing"></h4>
+      <section id="cursos" class="cursos">
+      </section>
+    </article>
+    <footer>
+      <p>&#169; 2020 <a href="#">Walther Rojas Delgado</a></p>
+    </footer>
+  </section>
+  <script type="text/javascript" src="https://www.techtransit.com/mission.courses/coursesData.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>

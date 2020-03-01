@@ -1,0 +1,159 @@
+.container {
+  padding: 20px;
+}
+
+.cursos,
+.filters {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+
+@media screen and (max-width: 992px) {
+
+  .cursos,
+  .filters {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+  }
+}
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+
+  .cursos,
+  .filters {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px;
+  }
+}
+
+.curso {
+  border: solid 1px #ccc;
+  border-radius: 20px;
+  margin: auto 0;
+  padding: 20px;
+}
+
+.curso img {
+  max-width: 80px;
+}
+
+.curso .credits {
+  border-radius: 12px;
+  float: right;
+  border: solid 1px #ccc;
+  padding: 5px;
+  margin: 25px 10px;
+}
+
+.curso h3,
+.curso .description,
+.curso p {
+  text-align: center;
+}
+
+.curso .price {
+  margin-left: 50px;
+  float: left;
+}
+
+.curso .rating {
+  margin-right: 50px;
+  float: right;
+}
+
+input[type='range'] {
+  display: inline;
+  width: 100px;
+}
+
+input[type='range']:focus {
+  outline: none;
+}
+
+input[type='range'],
+input[type='range']::-webkit-slider-runnable-track,
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  background-color: #ccc;
+  width: 20px;
+  height: 20px;
+  border: 3px solid #333;
+  border-radius: 50%;
+  margin-top: -9px;
+}
+
+input[type=range]::-moz-range-thumb {
+  background-color: #ccc;
+  width: 15px;
+  height: 15px;
+  border: 3px solid #333;
+  border-radius: 50%;
+}
+
+input[type=range]::-ms-thumb {
+  background-color: #ccc;
+  width: 10px;
+  height: 10px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  background-color: #ccc;
+  height: 3px;
+  border: 3px solid #ccc;
+  color: #ccc;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+  outline: none;
+}
+
+input[type=range]::-moz-range-track {
+  background-color: #ccc;
+  height: 3px;
+}
+
+input[type=range]::-ms-track {
+  background-color: #ccc;
+  height: 3px;
+}
+
+input[type=range]::-ms-fill-lower {
+  background-color: #ccc
+}
+
+input[type=range]::-ms-fill-upper {
+  background-color: #ccc;
+}
+
+.stars-outer {
+  display: inline-block;
+  position: relative;
+  font-family: FontAwesome;
+}
+
+.stars-outer::before {
+  content: "\f006 \f006 \f006 \f006 \f006";
+}
+
+.stars-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+}
+
+.stars-inner::before {
+  content: "\f005 \f005 \f005 \f005 \f005";
+  color: #555555;
+}
